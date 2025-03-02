@@ -30,6 +30,15 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    // Expose the release variant for publishing
+    publishing {
+        singleVariant("release") {
+            // Optionally, generate sources and Javadoc jars
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
@@ -42,16 +51,16 @@ dependencies {
 
 publishing {
     publications {
-        // Register a publication named "release"
+        // Register a Maven publication named "release"
         register<MavenPublication>("release") {
             groupId = "io.jitpack"
             artifactId = "library"
             version = "1.0"
 
-            // Use afterEvaluate to ensure that the components are available
+            // Use afterEvaluate to ensure that the Android components are configured
             project.afterEvaluate {
                 from(components["release"])
             }
         }
-}
+    }
 }
