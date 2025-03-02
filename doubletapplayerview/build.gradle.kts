@@ -39,3 +39,19 @@ dependencies {
     implementation("androidx.media3:media3-exoplayer-dash:1.4.1")
     implementation("androidx.media3:media3-ui:1.4.1")
 }
+
+publishing {
+    publications {
+        // Register a publication named "release"
+        register<MavenPublication>("release") {
+            groupId = "io.jitpack"
+            artifactId = "library"
+            version = "1.0"
+
+            // Use afterEvaluate to ensure that the components are available
+            project.afterEvaluate {
+                from(components["release"])
+            }
+        }
+}
+}
