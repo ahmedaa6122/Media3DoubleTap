@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <com.ahmedaa612.media3doubletap.dtpv.DoubleTapPlayerView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:show_subtitle_button="true"
+        app:dtpv_controller="@id/youtube_overlay1"
+        android:focusable="false"
+        android:id="@+id/playerView" />
+
+    <com.ahmedaa612.media3doubletap.dtpv.youtube.YouTubeOverlay
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        app:yt_playerView="@id/playerView"
+        android:id="@+id/youtube_overlay1" />
+
+</FrameLayout>
