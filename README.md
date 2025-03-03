@@ -34,8 +34,34 @@ into your XML layout by replacing `Media3 PlayerView` to `DoubleTapPlayerView` a
 
 Then, inside your `Activity` or `Fragment`, you can specify which preparations should be done
 before and after the animation, but don't forget to visible `Youtube Overlay` when animation stars and set invisible after animation end like that's:
+`
+youtubed.performListener(
+                new YouTubeOverlay.PerformListener() {
+                    @Override
+                    public void onAnimationStart() {
+                        youtubed.setAlpha(1.0f);
+                        youtubed.setVisibility(View.VISIBLE);
+                    }
 
+                    @Override
+                    public void onAnimationEnd() {
+                        youtubed.animate()
+                                .alpha(0.0f)
+                                .setDuration(300)
+                                .setListener(
+                                        new AnimatorListenerAdapter() {
 
+                                            @Override
+                                            public void onAnimationEnd(Animator animation) {
+                                                youtubed.setVisibility(View.GONE);
+                                                youtubed.setAlpha(1.0f);
+                                            }
+                                        });
+                    }
+                });
+                `
+
+                and by doing this steps your implement double tab feature to your `Player` .
 ___________________________________________________
 
 If you like the project, don't forget to support me ❣ 
