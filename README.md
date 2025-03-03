@@ -34,7 +34,7 @@ into your XML layout by replacing `Media3 PlayerView` to `DoubleTapPlayerView` a
 
 Then, inside your `Activity` or `Fragment`, you can specify which preparations should be done
 before and after the animation, but don't forget to visible `Youtube Overlay` when animation stars and set invisible after animation end like that's:
-`
+```
 youtubed.performListener(
                 new YouTubeOverlay.PerformListener() {
                     @Override
@@ -59,7 +59,7 @@ youtubed.performListener(
                                         });
                     }
                 });
-                `
+                ```
 
                 and by doing this steps your implement double tab feature to your `Player` .
 ___________________________________________________
