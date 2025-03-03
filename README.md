@@ -66,6 +66,24 @@ youtubed.performListener(
 
 and by doing this steps your implement double tab feature to your `Player` .
 
+
+### XML attributes
+
+You can Customized it.
+Every attributes value can also be get and set programmatically.
+
+| Attribute name | Description | Type |
+| ------------- | ------------| ------|
+| `yt_seekSeconds` | Fast forward/rewind seconds skip per tap. The text *xx seconds* will be changed where xx is `value`. | `int` |
+| `yt_animationDuration` |  Speed of the circle scaling / time in millis to expand completely. When this time has passed, YouTubeOverlay's `PerformListener.onAnimationEnd()` will be called. | `int` |
+| `yt_arcSize` | Arc of the background circle. The higher the value the more roundish the shape becomes. This attribute should be set dynamically depending on screen size and orientation. | `dimen` | 
+| `yt_tapCircleColor` | Color of the scaling circle after tap. | `color` |
+| `yt_backgroundCircleColor` | Color of the background shape. | `color` |
+| `yt_iconAnimationDuration` | Time in millis to run through an full fade cycle. | `int` |
+| `yt_icon` | One of the three forward icons. Will be multiplied by three and mirrored for rewind. | `drawable` |
+| `yt_textAppearance` | Text appearance for the *xx seconds* text. | `style` |
+
+
 ___________________________________________________
 
 If you like the project, don't forget to support me ❣ 
