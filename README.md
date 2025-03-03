@@ -1,10 +1,12 @@
 [![](https://jitpack.io/v/ahmedaa6122/Media3DoubleTap.svg)](https://jitpack.io/#ahmedaa6122/Media3DoubleTap)
 
 # Media3DoubleTap
-Double tap like YouTube library for media3 exoplayer
+Library for Double tap to fast forward and rewand like YouTube for media3 exoplayer
 
-
-
+1.Add the dependency 
+```
+implementation("com.github.ahmedaa6122:Media3DoubleTap:3.3.2025")
+```
 
 ___________________________________________________
 
