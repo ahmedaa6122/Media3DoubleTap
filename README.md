@@ -59,9 +59,11 @@ youtubed.performListener(
                                         });
                     }
                 });
-                ```
+```
+            
 
-                and by doing this steps your implement double tab feature to your `Player` .
+and by doing this steps your implement double tab feature to your `Player` .
+
 ___________________________________________________
 
 If you like the project, don't forget to support me ❣ 
