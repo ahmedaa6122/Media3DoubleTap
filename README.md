@@ -1,7 +1,7 @@
 [![](https://jitpack.io/v/ahmedaa6122/Media3DoubleTap.svg)](https://jitpack.io/#ahmedaa6122/Media3DoubleTap)
 
 # Media3DoubleTap
-Library for Double tap to fast forward and rewand like YouTube for media3 exoplayer
+its update of https://github.com/vkay94/DoubleTapPlayerView Library for Double tap to fast forward and rewand like YouTube for media3 exoplayer
 
 1.Add the dependency 
 ```
@@ -17,13 +17,13 @@ into your XML layout by replacing `Media3 PlayerView` to `DoubleTapPlayerView` a
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-    <com.github.vkay94.dtpv.DoubleTapPlayerView
+    <com.ahmedaa612.media3doubletap.dtpv.DoubleTapPlayerView
         android:id="@+id/playerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:dtpv_controller="@+id/youtube_overlay" />
 
-    <com.github.vkay94.dtpv.youtube.YouTubeOverlay
+    <com.ahmedaa612.media3doubletap.dtpv.youtube.YouTubeOverlay
         android:id="@+id/youtube_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
